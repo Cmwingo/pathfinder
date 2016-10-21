@@ -8,9 +8,11 @@ $(document).ready(function (){
     var question3Answer = $("input:radio[name=question3]:checked").val();
     var question4Answer = $("input:radio[name=question4]:checked").val();
     var question5Answer = $("input:radio[name=question5]:checked").val();
+    var name = $("#name").val();
     var answers = [question1Answer, question2Answer, question3Answer, question4Answer, question5Answer];
     var track = findPath(answers);
-    console.log(track);
+
+    $(".name").text(name);
     $("#resultsHeader").show();
     $("#pathfinderIntro").hide();
     $("#pathfinder").slideUp();
