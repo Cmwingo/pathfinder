@@ -20,8 +20,8 @@ $(document).ready(function (){
     console.log(answers[3]);
     console.log(answers[4]);
     // var result = findPath(question1Answer, question2Answer, question3Answer, question4Answer, question5Answer);
-    var result = findPath(answers);
-    console.log(result);
+    var track = findPath(answers);
+    console.log(track);
   });
 });
 
@@ -39,7 +39,7 @@ var findPath = function(answers){
   var answer3 = parseInt(answers[2]);
   var answer4 = parseInt(answers[3]);
   var answer5 = parseInt(answers[4]);
-  var track;
+  var track = 0;
 
   if(answer1 === 1){
     tracks[2]++;
@@ -107,11 +107,23 @@ var findPath = function(answers){
     idk++;
   }
 
-  // for(i = 0; i < 5; i++){
-  //   if( > ){
-  //     track = "tr" + i;
-  //   }
-  // }
+  for(i = 0; i < 5; i++){
+    if(tracks[i] > tracks[i+1]){
+      track = i;
+    } else if(tracks[i] === tracks[i+1]) {
+      if(answer5 === 1){
+        track = 1;
+      } else if (answer5 === 2){
+        track = 2;
+      } else if (answer5 === 3){
+        track =3;
+      } else if (answer5 === 4){
+        track =4;
+      } else if (answer5 === 5){
+        track =5;
+      }
+    }
+  }
 
 
   console.log(tracks[0]);
@@ -119,6 +131,6 @@ var findPath = function(answers){
   console.log(tracks[2]);
   console.log(tracks[3]);
   console.log(tracks[4]);
-  var result = tracks[0] + tracks[1];
-  return result;
+
+  return track;
 };
