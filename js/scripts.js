@@ -14,6 +14,7 @@ $(document).ready(function (){
     $("#resultsHeader").show();
     $("#pathfinderIntro").hide();
     $("#pathfinder").slideUp();
+
     if(track === 0){
       $("#track1").slideDown();
     } else if(track === 1){
@@ -24,6 +25,18 @@ $(document).ready(function (){
       $("#track4").slideDown();
     } else if(track === 4){
       $("#track5").slideDown();
+    }
+
+    if(question5Answer === "1") {
+      $("#superman").show();
+    } else if(question5Answer === "2") {
+      $("#batman").show();
+    } else if(question5Answer === "3") {
+      $("#theflash").show();
+    } else if(question5Answer === "4") {
+      $("#greenlantern").show();
+    } else if(question5Answer === "5") {
+      $("#harleyquinn").show();
     }
   });
 });
@@ -111,15 +124,15 @@ var findPath = function(answers){
       track = i;
     } else if(tracks[i] === tracks[i+1]) {
       if(answer5 === 1){
-        track = 1;
+        track = 0;
       } else if (answer5 === 2){
-        track = 2;
+        track = 1;
       } else if (answer5 === 3){
-        track =3;
+        track =2;
       } else if (answer5 === 4){
-        track =4;
+        track =3;
       } else if (answer5 === 5){
-        track =5;
+        track =4;
       }
     }
   }

@@ -11,3 +11,27 @@
 #resultsHeader {
   display: none;
 }
+
+.superheroes img {
+  width: 30%;
+  float: right;
+  display: none;
+  margin-left: 5px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url("../img/maze.png");
+  background-size: cover;
+  color: white;
+}
+
+.jumbotron h1 {
+  background-color: black;
+}
+
+.buttonwrapper {
+  margin-top: 50px;
+  text-align: center;
+  display: block;
+}
