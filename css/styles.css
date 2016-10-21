@@ -1,0 +1,9 @@
+.track img {
+  float: left;
+  width: 30%;
+  margin-right: 5px;
+}
+
+.track {
+  display: none;
+}
