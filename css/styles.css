@@ -7,3 +7,7 @@
 .track {
   display: none;
 }
+
+#resultsHeader {
+  display: none;
+}

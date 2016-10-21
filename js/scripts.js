@@ -11,16 +11,19 @@ $(document).ready(function (){
     var answers = [question1Answer, question2Answer, question3Answer, question4Answer, question5Answer];
     var track = findPath(answers);
     console.log(track);
+    $("#resultsHeader").show();
+    $("#pathfinderIntro").hide();
+    $("#pathfinder").slideUp();
     if(track === 0){
-      $("#track1").show();
+      $("#track1").slideDown();
     } else if(track === 1){
-      $("#track2").show();
+      $("#track2").slideDown();
     } else if(track === 2){
-      $("#track3").show();
+      $("#track3").slideDown();
     } else if(track === 3){
-      $("#track4").show();
+      $("#track4").slideDown();
     } else if(track === 4){
-      $("#track5").show();
+      $("#track5").slideDown();
     }
   });
 });
