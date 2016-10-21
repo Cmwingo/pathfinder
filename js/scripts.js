@@ -9,29 +9,25 @@ $(document).ready(function (){
     var question4Answer = $("input:radio[name=question4]:checked").val();
     var question5Answer = $("input:radio[name=question5]:checked").val();
     var answers = [question1Answer, question2Answer, question3Answer, question4Answer, question5Answer];
-    console.log(question1Answer);
-    console.log(question2Answer);
-    console.log(question3Answer);
-    console.log(question4Answer);
-    console.log(question5Answer);
-    console.log(answers[0]);
-    console.log(answers[1]);
-    console.log(answers[2]);
-    console.log(answers[3]);
-    console.log(answers[4]);
-    // var result = findPath(question1Answer, question2Answer, question3Answer, question4Answer, question5Answer);
     var track = findPath(answers);
     console.log(track);
+    if(track === 0){
+      $("#track1").show();
+    } else if(track === 1){
+      $("#track2").show();
+    } else if(track === 2){
+      $("#track3").show();
+    } else if(track === 3){
+      $("#track4").show();
+    } else if(track === 4){
+      $("#track5").show();
+    }
   });
 });
 
 //Business Logic
 var findPath = function(answers){
-  // var tracks[0] = 0;
-  // var tracks[1] = 0;
-  // var tracks[2] = 0;
-  // var tracks[3] = 0;
-  // var tracks[4] = 0;
+
   var idk = 0;
   var tracks = [0, 0, 0, 0, 0];
   var answer1 = parseInt(answers[0]);
