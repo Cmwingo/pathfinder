@@ -25,6 +25,8 @@ $(document).ready(function (){
       $("#track4").slideDown();
     } else if(track === 4){
       $("#track5").slideDown();
+    } else if(track === 5){
+      $("#track6").slideDown();
     }
 
     if(question5Answer === "1") {
@@ -137,6 +139,9 @@ var findPath = function(answers){
     }
   }
 
+  if(idk >= 3){
+    track = 5;
+  }
 
   console.log(tracks[0]);
   console.log(tracks[1]);
