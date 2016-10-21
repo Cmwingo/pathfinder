@@ -27,12 +27,13 @@ $(document).ready(function (){
 
 //Business Logic
 var findPath = function(answers){
-  var tr1 = 0;
-  var tr2 = 0;
-  var tr3 = 0;
-  var tr4 = 0;
-  var tr5 = 0;
+  // var tracks[0] = 0;
+  // var tracks[1] = 0;
+  // var tracks[2] = 0;
+  // var tracks[3] = 0;
+  // var tracks[4] = 0;
   var idk = 0;
+  var tracks = [0, 0, 0, 0, 0];
   var answer1 = parseInt(answers[0]);
   var answer2 = parseInt(answers[1]);
   var answer3 = parseInt(answers[2]);
@@ -41,84 +42,83 @@ var findPath = function(answers){
   var track;
 
   if(answer1 === 1){
-    tr3++;
-    tr4++;
+    tracks[2]++;
+    tracks[3]++;
   } else if (answer1 === 2){
-    tr1++;
-    tr3++;
-    tr4++;
-    tr5++;
+    tracks[0]++;
+    tracks[2]++;
+    tracks[3]++;
+    tracks[4]++;
   } else if (answer1 === 3){
-    tr1++;
-    tr2++;
-    tr5++;
+    tracks[0]++;
+    tracks[1]++;
+    tracks[4]++;
   } else if (answer1 === 4){
     idk++;
   }
 
   if(answer2 === 1){
-    tr3++;
+    tracks[2]++;
   } else if (answer2 === 2){
-    tr1++;
-    tr2++;
-    tr4++;
-    tr5++;
+    tracks[0]++;
+    tracks[1]++;
+    tracks[3]++;
+    tracks[4]++;
   } else if (answer2 === 3){
-    tr1++;
-    tr2++;
-    tr3++;
-    tr4++;
-    tr5++;
+    tracks[0]++;
+    tracks[1]++;
+    tracks[2]++;
+    tracks[3]++;
+    tracks[4]++;
   } else if (answer2 === 4){
     idk++;
   }
 
   if(answer3 === 1){
-    tr1++;
-    tr3++;
-    tr4++;
+    tracks[0]++;
+    tracks[2]++;
+    tracks[3]++;
   } else if (answer3 === 2){
-    tr1++;
-    tr5++;
+    tracks[0]++;
+    tracks[4]++;
   } else if (answer3 === 3){
-    tr1++;
-    tr2++;
-    tr3++;
-    tr4++;
-    tr5++;
+    tracks[0]++;
+    tracks[1]++;
+    tracks[2]++;
+    tracks[3]++;
+    tracks[4]++;
   } else if (answer3 === 4){
     idk++;
   }
 
   if(answer4 === 1){
-    tr1++;
-    tr3++;
+    tracks[0]++;
+    tracks[2]++;
   } else if (answer4 === 2){
-    tr1++;
-    tr3++;
-    tr4++;
-    tr5++;
+    tracks[0]++;
+    tracks[2]++;
+    tracks[3]++;
+    tracks[4]++;
   } else if (answer4 === 3){
-    tr2++;
-    tr3++;
-    tr5++;
+    tracks[1]++;
+    tracks[2]++;
+    tracks[4]++;
   } else if (answer4 === 4){
     idk++;
   }
 
   // for(i = 0; i < 5; i++){
-  //   debugger;
-  //   if("'tr' + '(i+1)' " > " 'tr' + '(i+2)' "){
+  //   if( > ){
   //     track = "tr" + i;
   //   }
   // }
 
 
-  console.log(tr1);
-  console.log(tr2);
-  console.log(tr3);
-  console.log(tr4);
-  console.log(tr5);
-  var result = tr1 + tr2;
+  console.log(tracks[0]);
+  console.log(tracks[1]);
+  console.log(tracks[2]);
+  console.log(tracks[3]);
+  console.log(tracks[4]);
+  var result = tracks[0] + tracks[1];
   return result;
 };
