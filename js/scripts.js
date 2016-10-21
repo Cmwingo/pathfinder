@@ -31,6 +31,7 @@ var findPath = function(ans1, ans2, ans3, ans4, ans5){
   var answer3 = parseInt(ans3);
   var answer4 = parseInt(ans4);
   var answer5 = parseInt(ans5);
+
   if(answer1 === 1){
     tr3++;
     tr4++;
@@ -46,6 +47,58 @@ var findPath = function(ans1, ans2, ans3, ans4, ans5){
   } else if (answer1 === 4){
     idk++;
   }
+
+  if(answer2 === 1){
+    tr3++;
+  } else if (answer2 === 2){
+    tr1++;
+    tr2++;
+    tr4++;
+    tr5++;
+  } else if (answer2 === 3){
+    tr1++;
+    tr2++;
+    tr3++;
+    tr4++;
+    tr5++;
+  } else if (answer2 === 4){
+    idk++;
+  }
+
+  if(answer3 === 1){
+    tr1++;
+    tr3++;
+    tr4++;
+  } else if (answer3 === 2){
+    tr1++;
+    tr5++;
+  } else if (answer3 === 3){
+    tr1++;
+    tr2++;
+    tr3++;
+    tr4++;
+    tr5++;
+  } else if (answer3 === 4){
+    idk++;
+  }
+
+  if(answer4 === 1){
+    tr1++;
+    tr3++;
+  } else if (answer4 === 2){
+    tr1++;
+    tr3++;
+    tr4++;
+    tr5++;
+  } else if (answer4 === 3){
+    tr2++;
+    tr3++;
+    tr5++;
+  } else if (answer4 === 4){
+    idk++;
+  }
+
+
   console.log(tr1);
   console.log(tr2);
   console.log(tr3);
